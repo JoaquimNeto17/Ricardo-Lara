@@ -1,0 +1,239 @@
+:root{--black:#030303;--surface:#090909;--white:#f5f5f5;--muted:#a3a3a3;--line:#292929;--blue:#77bfff;--header-height:88px;color-scheme:dark;font-family:Arial,Helvetica,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-offset,var(--header-height)) + 18px)}body{margin:0;background:var(--black);color:var(--white);font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}h1,h2,h3,p{margin:0}img{display:block;max-width:100%}a,button{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:6px}.container{width:min(1200px,calc(100% - 96px));margin-inline:auto}.icon,.service-icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}.icon-library{position:absolute;width:0;height:0;overflow:hidden}.skip-link{position:fixed;z-index:100;top:-100px;left:20px;padding:12px 20px;background:white;color:black}.skip-link:focus{top:10px}.site-header{position:fixed;inset:0 0 auto;z-index:30;background:#030303f5;border-bottom:1px solid #202020;backdrop-filter:blur(12px)}.header-inner{min-height:var(--header-height);display:flex;justify-content:space-between;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:13px;flex:none}.brand img{width:51px;height:55px;object-fit:contain}.brand strong{display:block;font-size:1rem;font-weight:700;letter-spacing:.045em;line-height:1.25}.brand small{display:block;font-size:.75rem;color:#b0b0b0;line-height:1.3;margin-top:5px}.main-nav{display:flex;align-items:center;gap:34px;font-size:.875rem}.main-nav>a:not(.button){color:var(--muted);padding-block:10px}.main-nav>a.active:not(.button),.main-nav>a:hover{color:white}.services-menu{position:relative}.services-toggle{display:flex;align-items:center;gap:9px;padding:10px 0;border:none;background:none;color:var(--muted)}.services-toggle:hover,.services-toggle.active{color:white}.services-toggle .icon{width:15px;height:15px;transition:transform .2s}.services-toggle[aria-expanded=true] .icon{transform:rotate(180deg)}.services-dropdown{position:absolute;top:calc(100% + 24px);left:-22px;width:308px;padding:10px;background:#090909;border:1px solid #363636;border-radius:3px;box-shadow:0 20px 40px #0008}.services-dropdown[hidden]{display:none}.services-dropdown>a{display:flex;align-items:center;gap:12px;padding:13px 12px;font-size:.875rem;line-height:1.4;min-height:48px}.services-dropdown>a .icon{width:19px;height:19px;color:#9acfff}.services-dropdown>a:hover{background:#181818}.mobile-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #333;background:#090909;border-radius:3px}.button{display:inline-flex;justify-content:center;align-items:center;gap:11px;min-height:54px;padding:16px 24px;background:#f3f3f3;color:#090909;border:1px solid #f3f3f3;border-radius:3px;font-size:.9375rem;font-weight:600;line-height:1.35;transition:background .2s,border-color .2s}.button:hover{background:#d2e7f9;border-color:#d2e7f9}.header-cta{min-height:43px;padding:11px 16px;font-size:.875rem;gap:10px}.header-cta .icon{width:18px;height:18px}.reading-progress{position:absolute;bottom:-1px;left:0;width:100%;height:1px;background:#76b9f1;transform-origin:left center;transform:scaleX(0);pointer-events:none}.site-lightning{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:#030303}.site-lightning:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#030303 0%,#030303e6 18%,#03030380 42%,transparent 72%),linear-gradient(0deg,#030303 0%,transparent 16%,transparent 87%,#030303 100%);pointer-events:none}main,footer{position:relative;z-index:2}.screen{position:relative;display:flex;align-items:center;min-height:100svh;padding:calc(var(--header-offset,var(--header-height)) + 36px) 0 90px;border-bottom:1px solid #202020}.screen>.container:not(.section-foot){position:relative;z-index:2}.hero-inner{width:min(1200px,calc(100% - 96px))}.hero-copy{max-width:720px}.eyebrow{font-size:.75rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}h1{margin-top:24px;font-size:clamp(4rem,7.2vw,6rem);line-height:.98;letter-spacing:-.065em;font-weight:700}.title-line{display:block;overflow:hidden;padding-block:.05em;margin-block:-.05em}.title-line>span{display:inline-block}.hero-description{color:#b5b5b5;font-size:1rem;line-height:1.75;margin-top:26px;max-width:430px}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:28px;margin-top:28px}.secondary-link{display:inline-flex;align-items:center;gap:10px;font-size:.9375rem;border-bottom:1px solid #646464;padding-block:6px;min-height:44px}.secondary-link:hover{border-color:white;color:white}.secondary-link .icon{width:19px;height:19px}.hero-phone{display:inline-block;margin-top:24px;color:#aaa;font-size:1rem;letter-spacing:.02em}.hero-phone:hover{color:white}.section-foot{position:absolute;bottom:29px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;color:#7c7c7c;font-size:.75rem;letter-spacing:.035em}.section-foot>a{display:inline-flex;align-items:center;gap:12px;color:#a7a7a7;min-height:36px}.section-foot .icon{width:16px;height:16px}.section-foot>a:hover{color:#fff}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:32px}h2{margin-top:16px;font-size:clamp(2.3rem,4.3vw,3.65rem);font-weight:500;letter-spacing:-.05em;line-height:1.08}.section-heading>p{font-size:.9375rem;color:var(--muted);line-height:1.7}.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.service-card{display:flex;flex-direction:column;justify-content:space-between;min-height:177px;padding:23px 24px;background:#080808f5;border:1px solid #303030;border-radius:3px;scroll-margin-top:calc(var(--header-offset,var(--header-height)) + 26px);transition:border-color .25s,background .25s}.service-card:hover,.service-card:target{border-color:#a5a5a5;background:#0d0d0d}.service-card:target{outline:1px solid #7ab8e8;outline-offset:4px}.card-top{display:flex;justify-content:space-between;align-items:center;color:#aaa}.card-top .service-icon{width:26px;height:26px;stroke-width:1.5;color:#b8c8d5}.card-top>span{font-size:.75rem;color:#6d6d6d;letter-spacing:.06em}.service-card h3{margin-top:22px;margin-bottom:24px;font-size:1.25rem;font-weight:400;line-height:1.3;letter-spacing:-.015em}.card-action{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.875rem;color:#a1a1a1}.card-action .icon{width:18px;height:18px}.service-card:hover .card-action{color:white}.audience-inner{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:100px}.audience-copy h2,.contact-copy h2{font-size:clamp(2.6rem,4.8vw,4.1rem);line-height:1.1;font-weight:500}.audience-copy>p:not(.eyebrow),.contact-copy>p:not(.eyebrow){color:var(--muted);line-height:1.8;margin-top:25px;font-size:1rem}.audience-copy .secondary-link{margin-top:28px}.audience-grid{display:flex;flex-direction:column;gap:18px}.audience-card{display:flex;align-items:center;gap:23px;border:1px solid #303030;border-radius:3px;background:#080808f2;padding:31px 29px;min-height:116px}.audience-card>.service-icon{width:32px;height:32px;color:#a8bac8;stroke-width:1.3}.audience-card h3{font-size:1.5rem;font-weight:400;letter-spacing:-.025em}.contact-inner{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:100px}.contact-copy .button{margin-top:32px}.contact-details{padding:14px 0 14px 44px;border-left:1px solid #383838;display:flex;flex-direction:column;align-items:start;min-width:0}.contact-details img{width:93px;height:100px;object-fit:contain;margin-bottom:22px}.contact-details>strong{font-size:1.65rem;letter-spacing:.035em;font-weight:600;line-height:1.3}.contact-details>span{font-size:.9375rem;color:#aaa;margin-top:5px}.contact-number{margin-top:31px;font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-.035em;line-height:1.3;white-space:nowrap}.contact-number:hover{color:#acd6f8}.contact-details>small{font-size:.75rem;color:#848484;margin-top:8px}footer{background:#030303;padding:22px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#737373;font-size:.75rem}.floating-contact{position:fixed;right:22px;bottom:22px;display:flex;align-items:center;justify-content:center;width:51px;height:51px;background:#080808;border:1px solid #535353;color:white;border-radius:50%;z-index:25;transition:background .2s,border-color .2s}.floating-contact>.icon{width:25px;height:25px}.floating-contact:hover{background:#151515;border-color:#c5c5c5}
+@media(min-width:1600px){.container,.hero-inner{width:min(1340px,calc(100% - 140px))}h1{font-size:7rem}.service-card{min-height:200px}.section-heading{margin-bottom:40px}}@media(max-width:1100px){.container,.hero-inner{width:calc(100% - 64px)}.main-nav{gap:24px}.audience-inner,.contact-inner{gap:60px}.service-card{padding:22px 21px}.service-card h3{font-size:1.15rem}.brand strong{font-size:.9375rem}.contact-details{padding-left:32px}}@media(max-width:850px){:root{--header-height:80px}.container,.hero-inner{width:calc(100% - 48px)}.mobile-toggle{display:flex}.main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#030303;border-bottom:1px solid #333;padding:18px 24px 25px;max-height:calc(100dvh - var(--header-offset,var(--header-height)));overflow-y:auto;box-shadow:0 16px 40px #0009}.main-nav.open{display:flex;flex-direction:column;align-items:stretch;gap:3px}.main-nav>a:not(.button){padding-block:13px;font-size:1rem}.services-toggle{width:100%;justify-content:space-between;padding-block:13px;font-size:1rem}.services-dropdown{position:static;width:100%;margin-bottom:8px;box-shadow:none;padding:6px}.services-dropdown>a{font-size:.9375rem;min-height:48px}.header-cta{margin-top:12px;align-self:start;padding:14px 19px;font-size:.9375rem}.hero-copy{max-width:550px}h1{font-size:clamp(4rem,10vw,5.5rem)}.section-heading>p{max-width:245px}.service-card h3{font-size:1.125rem;min-height:2.6em;margin-bottom:19px}.service-card{padding:21px 18px}.card-action{font-size:.875rem;align-items:start}.card-action .icon{margin-top:2px}.audience-inner,.contact-inner{gap:32px}.audience-card{padding:25px 20px;gap:17px}.audience-card h3{font-size:1.3rem}.contact-details{padding-left:25px}.contact-details>strong{font-size:1.35rem}.contact-details>span{font-size:.875rem}.contact-number{font-size:1.4rem}.site-lightning:after{background:linear-gradient(90deg,#030303f2 0%,#030303c9 35%,#03030330 75%),linear-gradient(0deg,#030303 0%,transparent 20%,transparent 85%,#030303 100%)}}
+@media(max-width:620px){:root{--header-height:76px}.container,.hero-inner{width:calc(100% - 40px)}.brand img{width:43px;height:47px}.brand{gap:10px}.brand strong{font-size:.875rem;letter-spacing:.035em}.brand small{font-size:.75rem;margin-top:4px}.screen{min-height:auto;padding:95px 0 80px}.hero-screen{min-height:100svh;padding-top:calc(var(--header-offset,var(--header-height)) + 45px);padding-bottom:105px}.hero-copy{max-width:none}h1{font-size:clamp(3.8rem,15vw,5.5rem);letter-spacing:-.065em;margin-top:22px;line-height:1.03}.eyebrow{font-size:.75rem;letter-spacing:.1em}.hero-description{font-size:1rem;max-width:330px;margin-top:24px;line-height:1.75}.hero-actions{gap:17px;margin-top:26px}.button{padding:16px 20px;min-height:54px;font-size:.9375rem}.hero-actions .button{flex-basis:auto}.hero-actions .secondary-link{font-size:.9375rem}.hero-phone{margin-top:24px;font-size:1rem}.section-foot{bottom:24px;font-size:.75rem}.section-foot>a{gap:8px;max-width:220px}.section-heading{display:block;margin-bottom:28px}.section-heading>p{margin-top:18px;font-size:.9375rem;max-width:none}.section-heading>p br{display:none}h2{font-size:2.25rem;letter-spacing:-.04em}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.service-card{min-height:191px;padding:20px 16px}.service-card h3{font-size:1.15rem;line-height:1.35;margin-top:21px;min-height:2.7em;margin-bottom:20px}.card-top .service-icon{width:25px;height:25px}.card-top>span{font-size:.75rem}.card-action{font-size:.875rem;line-height:1.35;gap:5px}.card-action .icon{width:17px;height:17px}.audience-inner,.contact-inner{grid-template-columns:1fr;gap:38px}.audience-copy h2,.contact-copy h2{font-size:clamp(2.6rem,10vw,3.5rem)}.audience-copy>p:not(.eyebrow),.contact-copy>p:not(.eyebrow){font-size:1rem;max-width:330px}.audience-copy>p br,.contact-copy>p br{display:none}.audience-copy .secondary-link{margin-top:22px}.audience-grid{gap:12px}.audience-card{min-height:103px;padding:25px 22px;gap:20px}.audience-card h3{font-size:1.4rem}.contact-copy .button{margin-top:27px}.contact-details{border-left:none;border-top:1px solid #333;padding:28px 0 0}.contact-details img{width:70px;height:75px;margin-bottom:20px}.contact-details>strong{font-size:1.45rem}.contact-details>span{font-size:.9375rem}.contact-number{font-size:1.85rem;margin-top:23px}.contact-details>small{font-size:.8125rem}.site-lightning:after{background:linear-gradient(90deg,#030303f7 0%,#030303cc 28%,#03030360 60%,#03030310 100%),linear-gradient(0deg,#030303 0%,transparent 16%,transparent 85%,#030303 100%)}.footer-inner{font-size:.75rem;gap:15px}.footer-description{display:none}footer{padding-bottom:30px}.floating-contact{right:16px;bottom:16px;width:49px;height:49px}.contact-screen{padding-bottom:86px}}
+@media(max-width:370px){.container,.hero-inner{width:calc(100% - 32px)}.brand{gap:7px}.brand strong{font-size:.8125rem}.brand small{font-size:.75rem}.hero-actions{gap:12px}.hero-actions .button{flex-basis:100%}.hero-actions .secondary-link{margin-top:1px}.service-card{padding:19px 12px}.service-card h3{font-size:1.05rem}.card-action{font-size:.875rem}.card-action .icon{display:none}.contact-number{font-size:1.6rem}.hero-screen{padding-top:calc(var(--header-offset,var(--header-height)) + 34px)}}@media(max-width:300px){.services-grid{grid-template-columns:1fr}.service-card h3{min-height:0;font-size:1.25rem}.brand img{width:32px;height:39px}.brand small{max-width:133px}.brand strong{font-size:.75rem}.mobile-toggle{width:40px;height:40px;flex:none}h1{font-size:3.2rem}}
+@media(max-height:680px) and (min-width:621px){.screen{padding-top:calc(var(--header-offset,var(--header-height)) + 25px);padding-bottom:74px}h1{font-size:clamp(3.5rem,6.8vw,5.5rem)}.hero-description{margin-top:19px}.hero-actions{margin-top:21px}.hero-phone{margin-top:19px}.section-heading{margin-bottom:25px}.service-card{min-height:155px;padding-block:18px}.service-card h3{margin-top:18px;margin-bottom:18px}.section-foot{bottom:21px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reading-progress{display:none}}
+/* Contact controls. */
+.button-blue{background:#176ac3;border-color:#3984d5;color:#fff}.button-blue:hover{background:#2279d2;border-color:#65a8ed}.floating-contact{background:#147c47;border-color:#359667;box-shadow:0 5px 22px #0005}.floating-contact:hover{background:#1b8c53;border-color:#69bd90}.secondary-link:hover{color:#9bd0ff;border-color:#72b3e9}.service-card:hover{border-color:#567a9b}.service-card:hover .card-top .service-icon,.service-card:hover .card-action{color:#9dd1fb}.scroll-managed{scroll-behavior:auto!important}.screen:focus{outline:none}.button{position:relative;overflow:hidden}.button:after{content:"";position:absolute;inset:-100% -35%;background:linear-gradient(110deg,transparent 40%,#ffffff25 50%,transparent 60%);transform:translateX(-85%);pointer-events:none}.button:hover:after{animation:contact-shine .7s ease-out}.services-dropdown>a{transition:background .2s,color .2s}.contact-number{transition:color .2s}@keyframes contact-shine{to{transform:translateX(85%)}}@media(prefers-reduced-motion:reduce){.button:after{display:none}}
+
+/* Complete lightning texture: no reveal slices or image edges inside the viewport. */
+.lightning-channel{position:absolute;left:calc(76% - 68vh);left:calc(76% - 68svh);top:-45vh;top:-45svh;width:113.333vh;width:113.333svh;height:170vh;height:170svh;transform-origin:center top;will-change:transform;pointer-events:none}
+.lightning-bolt{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;opacity:.62}
+
+
+.brand{flex:0 1 auto;min-width:0}.brand>span{min-width:0}.brand img,.mobile-toggle{flex-shrink:0}.brand strong,h2,.service-card h3{overflow-wrap:anywhere}.header-inner{padding-block:12px}.button{max-width:100%;text-align:center}.audience-copy,.contact-copy,.audience-grid{min-width:0}.contact-number{white-space:normal}.footer-inner{flex-wrap:wrap;column-gap:24px;row-gap:8px;padding-right:60px}.developer-credit{display:inline-flex;align-items:center;min-height:44px;color:#b3c9dc;font-size:.875rem;text-underline-offset:5px;transition:color .2s}.developer-credit:hover{color:#9bd0ff;text-decoration:underline}.floating-contact{bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+@media(max-width:850px){.main-nav>a:not(.button),.services-toggle{min-height:48px}.lightning-bolt{opacity:.5}}
+@media(max-width:620px){h1{font-size:min(15vw,5.5rem)}.header-inner{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column;gap:3px;padding-right:56px}.developer-credit{font-size:.875rem}.floating-contact{bottom:calc(16px + env(safe-area-inset-bottom,0px))}footer{padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}.section-foot>a{min-height:44px}.lightning-bolt{opacity:.42}}
+@media(max-width:380px){.services-grid{grid-template-columns:1fr}.service-card{min-height:172px}.service-card h3{min-height:0;font-size:1.2rem}.card-action .icon{display:block}.brand small{overflow-wrap:anywhere}.audience-card{gap:14px;padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){.lightning-channel{will-change:auto}.lightning-bolt{opacity:.2}}
+
+/* PREMIUM PATCH START — remove this block to restore the previous styling. */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/InterVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-feature-settings: "cv11", "ss01", "calt";
+  --card-radius: 14px;
+  --blue-soft: color-mix(in srgb, var(--blue) 10%, transparent);
+  --blue-line: color-mix(in srgb, var(--blue) 30%, transparent);
+  --blue-glow: color-mix(in srgb, var(--blue) 18%, transparent);
+  --glass-bg: color-mix(in srgb, var(--surface) 88%, transparent);
+  --glass-top: color-mix(in srgb, var(--white) 4%, transparent);
+  --card-edge: color-mix(in srgb, var(--white) 12%, var(--line));
+  --text-secondary: color-mix(in srgb, var(--muted) 85%, var(--white));
+}
+/* 1. Type: keep the original palette, soften tracking, improve small-label contrast. */
+h1 { letter-spacing: -.045em; font-weight: 650; }
+h2, .audience-copy h2, .contact-copy h2 { letter-spacing: -.035em; text-wrap: balance; }
+.eyebrow, .brand small, .section-foot, .card-top > span,
+.contact-details > small, .footer-inner { font-size: .8125rem; }
+.card-top > span, .section-foot, .section-foot > a, .footer-inner,
+.contact-details > small { color: var(--muted); }
+.hero-description, .section-heading > p, .audience-copy > p:not(.eyebrow),
+.contact-copy > p:not(.eyebrow), .card-action { color: var(--text-secondary); }
+.eyebrow { color: var(--blue); letter-spacing: .12em; }
+.hero-phone, .contact-number, .card-top > span, .section-foot > span { font-variant-numeric: tabular-nums; }
+
+/* 2. Glass surfaces and icon tiles; content stays above the pointer highlight. */
+.service-card, .audience-card, .contact-details {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--card-radius);
+  background: var(--surface);
+  background: linear-gradient(145deg, var(--glass-top), transparent 58%), var(--glass-bg);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--black) 18%, transparent);
+  transition: border-color .25s, box-shadow .25s;
+}
+.service-card > *, .audience-card > *, .contact-details > * { position: relative; z-index: 1; }
+.service-card::before, .audience-card::before, .contact-details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), var(--blue-soft), transparent 72%);
+  transition: opacity .25s;
+}
+.service-card::after, .audience-card::after, .contact-details::after {
+  content: "";
+  position: absolute;
+  inset: 0 18px auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue-line), transparent);
+  pointer-events: none;
+}
+.service-card:hover, .service-card:target, .service-card:focus-visible,
+.audience-card:hover, .contact-details:focus-within {
+  border-color: var(--blue-line);
+  background: linear-gradient(145deg, var(--glass-top), transparent 58%), var(--glass-bg);
+}
+.card-top .service-icon, .audience-card > .service-icon {
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-line);
+  border-radius: 12px;
+}
+.service-card { padding: 24px; min-height: 224px; }
+.service-card h3 { font-weight: 500; letter-spacing: -.02em; }
+.services-grid { gap: 16px; }
+.card-arrow { display: none; }
+
+/* 3. White primary controls; the existing button-blue class remains compatible. */
+.button, .button-blue, .services-dropdown, .mobile-toggle { border-radius: var(--card-radius); }
+.button, .button-blue {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+  font-weight: 600;
+  box-shadow: 0 1px 0 var(--blue-line);
+  transition: background .2s, border-color .2s, box-shadow .25s;
+}
+.button:hover, .button-blue:hover {
+  background: var(--white);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft), 0 8px 28px var(--blue-glow);
+}
+.button::after { display: none; }
+.secondary-link { border-color: var(--blue-line); }
+.secondary-link:hover, .contact-number:hover, .developer-credit:hover { color: var(--blue); border-color: var(--blue); }
+.service-card:hover .card-top .service-icon, .service-card:hover .card-action { color: var(--blue); }
+.services-dropdown { background: var(--glass-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-color: var(--card-edge); }
+.services-dropdown > a { border-radius: 9px; }
+.services-dropdown > a .icon { color: var(--blue); }
+.services-dropdown > a:hover { background: var(--blue-soft); }
+.mobile-toggle { background: var(--surface); border-color: var(--card-edge); }
+.header-cta, .mobile-toggle { min-width: 44px; min-height: 44px; }
+.main-nav > a:not(.button), .services-toggle { display: flex; align-items: center; min-height: 44px; }
+.hero-phone, .contact-number { display: inline-flex; align-items: center; min-height: 44px; }
+.section-foot > a, .skip-link { min-height: 44px; }
+
+/* 4. WhatsApp: a brand-blue ring, with text revealed on desktop hover/focus. */
+.floating-contact {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  gap: 0;
+  padding-inline: 13px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--blue);
+  border-color: var(--blue-line);
+  box-shadow: 0 0 0 4px var(--blue-soft), 0 8px 28px var(--blue-glow);
+  transition: width .28s, gap .28s, border-color .2s, background .2s;
+}
+.floating-contact:hover { background: var(--surface); border-color: var(--blue); }
+.floating-label { display: none; font-size: .875rem; font-weight: 550; white-space: nowrap; }
+@keyframes whatsapp-ring {
+  0%, 85%, 100% { box-shadow: 0 0 0 4px var(--blue-soft), 0 8px 28px var(--blue-glow); }
+  91% { box-shadow: 0 0 0 8px var(--blue-soft), 0 8px 34px var(--blue-glow); }
+}
+@media (prefers-reduced-motion: no-preference) { .floating-contact { animation: whatsapp-ring 10s ease-in-out infinite; } }
+
+/* 5. More substantial audience and contact cards, without adding copy. */
+.audience-inner, .contact-inner { gap: clamp(32px, 5.5vw, 80px); }
+.audience-grid { gap: 16px; }
+.audience-card { padding: 28px; min-height: 132px; border-inline-start: 2px solid var(--blue-line); }
+.audience-card > .service-icon { width: 64px; height: 64px; padding: 14px; }
+.audience-card h3 { font-weight: 500; letter-spacing: -.025em; }
+.contact-details { padding: clamp(24px, 3vw, 40px); border-inline-start: 2px solid var(--blue-line); }
+.contact-details > strong { font-weight: 600; letter-spacing: .015em; }
+.contact-number { font-size: clamp(1.35rem, 2.1vw, 1.9rem); letter-spacing: -.025em; }
+.section-foot { letter-spacing: .015em; }
+.section-foot > span { color: var(--muted); }
+
+/* 6. A single continuous bolt, with a small ambient glow behind the hero title. */
+.lightning-bolt { opacity: .76; }
+.site-lightning::after {
+  background: linear-gradient(90deg, var(--black) 0%, color-mix(in srgb, var(--black) 94%, transparent) 22%, color-mix(in srgb, var(--black) 55%, transparent) 52%, transparent 80%),
+    linear-gradient(0deg, var(--black) 0%, transparent 18%, transparent 82%, var(--black) 100%);
+}
+.hero-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 22% 42%, color-mix(in srgb, var(--blue) 7%, transparent), transparent 62%);
+  pointer-events: none;
+}
+/* Optional portrait stays inactive while its HTML is commented out. */
+.hero-portrait { position: absolute; inset: 15% 0 0 48%; margin: 0; pointer-events: none; }
+.hero-portrait img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.hero-portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--black), transparent 65%), linear-gradient(0deg, var(--black), transparent 40%); }
+
+/* 7. Touch-first layouts. Horizontal service rows retain all original labels. */
+@media (max-width: 620px) {
+  .services-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .service-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: center;
+    column-gap: 16px;
+    min-height: 112px;
+    padding: 18px 48px 18px 18px;
+  }
+  .card-top { grid-row: 1 / span 2; flex-direction: column; justify-content: center; gap: 6px; }
+  .card-top > span { font-size: .8125rem; }
+  .service-card h3 { grid-column: 2; min-height: 0; margin: 0; font-size: 1.0625rem; line-height: 1.4; }
+  .card-action { grid-column: 2; margin-top: 6px; font-size: .8125rem; line-height: 1.5; }
+  .card-action > .icon:not(.card-arrow) { display: none; }
+  .service-card > .card-arrow { display: block; position: absolute; right: 18px; top: 50%; width: 18px; height: 18px; margin: 0; color: var(--blue); transform: translateY(-50%) rotate(-90deg); }
+  .audience-card { padding: 24px; gap: 20px; min-height: 124px; }
+  .contact-details { padding: 28px 24px; }
+  .contact-number { font-size: clamp(1.25rem, 6vw, 1.7rem); }
+  .lightning-bolt { opacity: .66; }
+  .site-lightning::after { background: linear-gradient(90deg, color-mix(in srgb, var(--black) 96%, transparent) 0%, color-mix(in srgb, var(--black) 86%, transparent) 40%, color-mix(in srgb, var(--black) 42%, transparent) 72%, transparent 100%), linear-gradient(0deg, var(--black), transparent 18%, transparent 82%, var(--black)); }
+  .hero-portrait { inset: 20% -12% 0 26%; opacity: .35; }
+}
+@media (max-width: 370px) {
+  .brand strong { font-size: .8125rem; }
+  .service-card { grid-template-columns: 48px minmax(0, 1fr); column-gap: 12px; padding-inline: 16px 42px; }
+  .card-top .service-icon { width: 48px; height: 48px; padding: 11px; }
+  .service-card > .card-arrow { right: 14px; }
+  .audience-card { padding: 22px 18px; gap: 16px; }
+  .contact-details { padding: 26px 20px; }
+}
+@media (min-width: 851px) { .main-nav { gap: clamp(16px, 2vw, 30px); } }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .service-card:hover::before, .audience-card:hover::before, .contact-details:hover::before { opacity: 1; }
+  .button::after { display: block; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .floating-contact { justify-content: flex-start; }
+  .floating-label { display: block; max-width: 0; opacity: 0; transition: max-width .28s, opacity .2s; }
+  .floating-contact:hover, .floating-contact:focus-visible { width: 200px; gap: 10px; }
+  .floating-contact:hover .floating-label, .floating-contact:focus-visible .floating-label { max-width: 140px; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card::before, .audience-card::before, .contact-details::before { display: none; }
+  .button::after { display: none; }
+  .floating-contact { animation: none; }
+  .lightning-bolt { opacity: .2; }
+}
+/* PREMIUM PATCH END */

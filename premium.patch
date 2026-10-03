@@ -1,0 +1,312 @@
+--- a/index.html
++++ b/index.html
+@@ -8,10 +8,19 @@
+   <title>Ricardo Lara | Eletricista e Encanador</title>
+   <link rel="icon" href="assets/brand-shield.webp" type="image/webp">
+   <link rel="preload" href="assets/brand-shield.webp" as="image">
+-  <link rel="stylesheet" href="styles.css?v=7">
++  <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
++  <link rel="stylesheet" href="styles.css?v=8">
+   <script src="assets/vendor/gsap.min.js" defer></script>
+   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+-  <script src="script.js?v=7" defer></script>
++  <script src="script.js?v=8" defer></script>
++  <noscript><style>
++    .site-header{position:relative}.header-inner{flex-wrap:wrap}
++    .main-nav{display:flex;position:static;max-height:none;overflow:visible;flex:1 0 100%;flex-wrap:wrap;align-items:flex-start;gap:16px;padding:12px 0;box-shadow:none}
++    .services-menu{flex:1 0 100%}
++    .services-dropdown[hidden]{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));position:static;width:100%;margin:0;box-shadow:none}
++    .mobile-toggle,.services-toggle,.reading-progress{display:none}
++    .hero-screen{padding-top:48px}
++  </style></noscript>
+ </head>
+ <body>
+   <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+@@ -58,6 +67,9 @@
+   </header>
+   <main id="principal">
+     <section id="inicio" class="screen hero-screen" aria-labelledby="hero-title">
++      <!-- Retrato opcional, desativado. Use uma foto recortada autorizada e mantenha o degradê escuro:
++      <figure class="hero-portrait" aria-hidden="true"><img src="assets/ricardo-recortado.webp" alt=""></figure>
++      -->
+       <div class="container hero-inner">
+         <div class="hero-copy"><p class="eyebrow">Residencial &amp; industrial</p>
+           <h1 id="hero-title"><span class="title-line"><span>Elétrica.</span></span><span class="title-line"><span>Hidráulica.</span></span><span class="title-line"><span>Energia.</span></span></h1>
+@@ -72,12 +84,12 @@
+       <div class="container">
+         <div class="section-heading"><div><p class="eyebrow">Serviços</p><h2 id="services-title">O que você precisa?</h2></div><p>Escolha o serviço.<br>Converse diretamente pelo WhatsApp.</p></div>
+         <div class="services-grid">
+-          <a id="instalacoes-eletricas" class="service-card" data-service="Instalações Elétricas" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-bolt"/></svg><span>01</span></span><h3>Instalações Elétricas</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
+-          <a id="servicos-hidraulicos" class="service-card" data-service="Serviços Hidráulicos" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-water"/></svg><span>02</span></span><h3>Serviços Hidráulicos</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
+-          <a id="ar-condicionado" class="service-card" data-service="Ar Condicionado" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-snow"/></svg><span>03</span></span><h3>Ar Condicionado</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
+-          <a id="alarmes-cameras" class="service-card" data-service="Alarmes e Câmeras" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-camera"/></svg><span>04</span></span><h3>Alarmes e Câmeras</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
+-          <a id="padrao-energia" class="service-card" data-service="Padrão de Energia" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-plug"/></svg><span>05</span></span><h3>Padrão de Energia</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
+-          <a id="energia-solar" class="service-card" data-service="Energia Solar" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-solar"/></svg><span>06</span></span><h3>Energia Solar</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span></a>
++          <a id="instalacoes-eletricas" class="service-card" data-service="Instalações Elétricas" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-bolt"/></svg><span>01</span></span><h3>Instalações Elétricas</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
++          <a id="servicos-hidraulicos" class="service-card" data-service="Serviços Hidráulicos" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-water"/></svg><span>02</span></span><h3>Serviços Hidráulicos</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
++          <a id="ar-condicionado" class="service-card" data-service="Ar Condicionado" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-snow"/></svg><span>03</span></span><h3>Ar Condicionado</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
++          <a id="alarmes-cameras" class="service-card" data-service="Alarmes e Câmeras" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-camera"/></svg><span>04</span></span><h3>Alarmes e Câmeras</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
++          <a id="padrao-energia" class="service-card" data-service="Padrão de Energia" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-plug"/></svg><span>05</span></span><h3>Padrão de Energia</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
++          <a id="energia-solar" class="service-card" data-service="Energia Solar" href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer"><span class="card-top"><svg class="service-icon"><use href="#i-solar"/></svg><span>06</span></span><h3>Energia Solar</h3><span class="card-action">Solicitar orçamento<svg class="icon"><use href="#i-whatsapp"/></svg></span><svg class="icon card-arrow" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+         </div>
+       </div>
+       <div class="section-foot container"><span>02 / 04</span><a href="#atendimento">Atendimento <svg class="icon"><use href="#i-chevron"/></svg></a></div>
+@@ -92,6 +104,6 @@
+     </section>
+   </main>
+   <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Ricardo Lara</span><span class="footer-description">Eletricista e encanador</span><a class="developer-credit" href="https://jn-hazel.vercel.app/" target="_blank" rel="noopener noreferrer">Desenvolvido por Joaquim</a></div></footer>
+-  <a class="floating-contact" data-whatsapp href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Ricardo Lara pelo WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a>
++  <a class="floating-contact" data-whatsapp href="https://wa.me/5515997137389" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Ricardo Lara pelo WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg><span class="floating-label" aria-hidden="true">Pedir orçamento</span></a>
+ </body>
+ </html>
+--- a/styles.css
++++ b/styles.css
+@@ -17,3 +17,223 @@
+ @media(max-width:620px){h1{font-size:min(15vw,5.5rem)}.header-inner{gap:14px}.footer-inner{align-items:flex-start;flex-direction:column;gap:3px;padding-right:56px}.developer-credit{font-size:.875rem}.floating-contact{bottom:calc(16px + env(safe-area-inset-bottom,0px))}footer{padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}.section-foot>a{min-height:44px}.lightning-bolt{opacity:.42}}
+ @media(max-width:380px){.services-grid{grid-template-columns:1fr}.service-card{min-height:172px}.service-card h3{min-height:0;font-size:1.2rem}.card-action .icon{display:block}.brand small{overflow-wrap:anywhere}.audience-card{gap:14px;padding-inline:18px}}
+ @media(prefers-reduced-motion:reduce){.lightning-channel{will-change:auto}.lightning-bolt{opacity:.2}}
++
++/* PREMIUM PATCH START — remove this block to restore the previous styling. */
++@font-face {
++  font-family: "Inter";
++  src: url("assets/fonts/InterVariable.woff2") format("woff2");
++  font-style: normal;
++  font-weight: 100 900;
++  font-display: swap;
++}
++:root {
++  font-family: "Inter", system-ui, Arial, sans-serif;
++  font-optical-sizing: auto;
++  font-feature-settings: "cv11", "ss01", "calt";
++  --card-radius: 14px;
++  --blue-soft: color-mix(in srgb, var(--blue) 10%, transparent);
++  --blue-line: color-mix(in srgb, var(--blue) 30%, transparent);
++  --blue-glow: color-mix(in srgb, var(--blue) 18%, transparent);
++  --glass-bg: color-mix(in srgb, var(--surface) 88%, transparent);
++  --glass-top: color-mix(in srgb, var(--white) 4%, transparent);
++  --card-edge: color-mix(in srgb, var(--white) 12%, var(--line));
++  --text-secondary: color-mix(in srgb, var(--muted) 85%, var(--white));
++}
++/* 1. Type: keep the original palette, soften tracking, improve small-label contrast. */
++h1 { letter-spacing: -.045em; font-weight: 650; }
++h2, .audience-copy h2, .contact-copy h2 { letter-spacing: -.035em; text-wrap: balance; }
++.eyebrow, .brand small, .section-foot, .card-top > span,
++.contact-details > small, .footer-inner { font-size: .8125rem; }
++.card-top > span, .section-foot, .section-foot > a, .footer-inner,
++.contact-details > small { color: var(--muted); }
++.hero-description, .section-heading > p, .audience-copy > p:not(.eyebrow),
++.contact-copy > p:not(.eyebrow), .card-action { color: var(--text-secondary); }
++.eyebrow { color: var(--blue); letter-spacing: .12em; }
++.hero-phone, .contact-number, .card-top > span, .section-foot > span { font-variant-numeric: tabular-nums; }
++
++/* 2. Glass surfaces and icon tiles; content stays above the pointer highlight. */
++.service-card, .audience-card, .contact-details {
++  position: relative;
++  isolation: isolate;
++  overflow: hidden;
++  border: 1px solid var(--card-edge);
++  border-radius: var(--card-radius);
++  background: var(--surface);
++  background: linear-gradient(145deg, var(--glass-top), transparent 58%), var(--glass-bg);
++  -webkit-backdrop-filter: blur(10px);
++  backdrop-filter: blur(10px);
++  box-shadow: 0 16px 40px color-mix(in srgb, var(--black) 18%, transparent);
++  transition: border-color .25s, box-shadow .25s;
++}
++.service-card > *, .audience-card > *, .contact-details > * { position: relative; z-index: 1; }
++.service-card::before, .audience-card::before, .contact-details::before {
++  content: "";
++  position: absolute;
++  inset: 0;
++  border-radius: inherit;
++  pointer-events: none;
++  opacity: 0;
++  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), var(--blue-soft), transparent 72%);
++  transition: opacity .25s;
++}
++.service-card::after, .audience-card::after, .contact-details::after {
++  content: "";
++  position: absolute;
++  inset: 0 18px auto;
++  height: 1px;
++  background: linear-gradient(90deg, transparent, var(--blue-line), transparent);
++  pointer-events: none;
++}
++.service-card:hover, .service-card:target, .service-card:focus-visible,
++.audience-card:hover, .contact-details:focus-within {
++  border-color: var(--blue-line);
++  background: linear-gradient(145deg, var(--glass-top), transparent 58%), var(--glass-bg);
++}
++.card-top .service-icon, .audience-card > .service-icon {
++  width: 52px;
++  height: 52px;
++  padding: 12px;
++  color: var(--blue);
++  background: var(--blue-soft);
++  border: 1px solid var(--blue-line);
++  border-radius: 12px;
++}
++.service-card { padding: 24px; min-height: 224px; }
++.service-card h3 { font-weight: 500; letter-spacing: -.02em; }
++.services-grid { gap: 16px; }
++.card-arrow { display: none; }
++
++/* 3. White primary controls; the existing button-blue class remains compatible. */
++.button, .button-blue, .services-dropdown, .mobile-toggle { border-radius: var(--card-radius); }
++.button, .button-blue {
++  background: var(--white);
++  border-color: var(--white);
++  color: var(--black);
++  font-weight: 600;
++  box-shadow: 0 1px 0 var(--blue-line);
++  transition: background .2s, border-color .2s, box-shadow .25s;
++}
++.button:hover, .button-blue:hover {
++  background: var(--white);
++  border-color: var(--blue);
++  box-shadow: 0 0 0 3px var(--blue-soft), 0 8px 28px var(--blue-glow);
++}
++.button::after { display: none; }
++.secondary-link { border-color: var(--blue-line); }
++.secondary-link:hover, .contact-number:hover, .developer-credit:hover { color: var(--blue); border-color: var(--blue); }
++.service-card:hover .card-top .service-icon, .service-card:hover .card-action { color: var(--blue); }
++.services-dropdown { background: var(--glass-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-color: var(--card-edge); }
++.services-dropdown > a { border-radius: 9px; }
++.services-dropdown > a .icon { color: var(--blue); }
++.services-dropdown > a:hover { background: var(--blue-soft); }
++.mobile-toggle { background: var(--surface); border-color: var(--card-edge); }
++.header-cta, .mobile-toggle { min-width: 44px; min-height: 44px; }
++.main-nav > a:not(.button), .services-toggle { display: flex; align-items: center; min-height: 44px; }
++.hero-phone, .contact-number { display: inline-flex; align-items: center; min-height: 44px; }
++.section-foot > a, .skip-link { min-height: 44px; }
++
++/* 4. WhatsApp: a brand-blue ring, with text revealed on desktop hover/focus. */
++.floating-contact {
++  width: 52px;
++  height: 52px;
++  min-width: 52px;
++  min-height: 52px;
++  gap: 0;
++  padding-inline: 13px;
++  overflow: hidden;
++  border-radius: 999px;
++  background: var(--surface);
++  color: var(--blue);
++  border-color: var(--blue-line);
++  box-shadow: 0 0 0 4px var(--blue-soft), 0 8px 28px var(--blue-glow);
++  transition: width .28s, gap .28s, border-color .2s, background .2s;
++}
++.floating-contact:hover { background: var(--surface); border-color: var(--blue); }
++.floating-label { display: none; font-size: .875rem; font-weight: 550; white-space: nowrap; }
++@keyframes whatsapp-ring {
++  0%, 85%, 100% { box-shadow: 0 0 0 4px var(--blue-soft), 0 8px 28px var(--blue-glow); }
++  91% { box-shadow: 0 0 0 8px var(--blue-soft), 0 8px 34px var(--blue-glow); }
++}
++@media (prefers-reduced-motion: no-preference) { .floating-contact { animation: whatsapp-ring 10s ease-in-out infinite; } }
++
++/* 5. More substantial audience and contact cards, without adding copy. */
++.audience-inner, .contact-inner { gap: clamp(32px, 5.5vw, 80px); }
++.audience-grid { gap: 16px; }
++.audience-card { padding: 28px; min-height: 132px; border-inline-start: 2px solid var(--blue-line); }
++.audience-card > .service-icon { width: 64px; height: 64px; padding: 14px; }
++.audience-card h3 { font-weight: 500; letter-spacing: -.025em; }
++.contact-details { padding: clamp(24px, 3vw, 40px); border-inline-start: 2px solid var(--blue-line); }
++.contact-details > strong { font-weight: 600; letter-spacing: .015em; }
++.contact-number { font-size: clamp(1.35rem, 2.1vw, 1.9rem); letter-spacing: -.025em; }
++.section-foot { letter-spacing: .015em; }
++.section-foot > span { color: var(--muted); }
++
++/* 6. A single continuous bolt, with a small ambient glow behind the hero title. */
++.lightning-bolt { opacity: .76; }
++.site-lightning::after {
++  background: linear-gradient(90deg, var(--black) 0%, color-mix(in srgb, var(--black) 94%, transparent) 22%, color-mix(in srgb, var(--black) 55%, transparent) 52%, transparent 80%),
++    linear-gradient(0deg, var(--black) 0%, transparent 18%, transparent 82%, var(--black) 100%);
++}
++.hero-screen::before {
++  content: "";
++  position: absolute;
++  inset: 0;
++  background: radial-gradient(ellipse at 22% 42%, color-mix(in srgb, var(--blue) 7%, transparent), transparent 62%);
++  pointer-events: none;
++}
++/* Optional portrait stays inactive while its HTML is commented out. */
++.hero-portrait { position: absolute; inset: 15% 0 0 48%; margin: 0; pointer-events: none; }
++.hero-portrait img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
++.hero-portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--black), transparent 65%), linear-gradient(0deg, var(--black), transparent 40%); }
++
++/* 7. Touch-first layouts. Horizontal service rows retain all original labels. */
++@media (max-width: 620px) {
++  .services-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
++  .service-card {
++    display: grid;
++    grid-template-columns: 52px minmax(0, 1fr);
++    grid-template-rows: auto auto;
++    align-content: center;
++    column-gap: 16px;
++    min-height: 112px;
++    padding: 18px 48px 18px 18px;
++  }
++  .card-top { grid-row: 1 / span 2; flex-direction: column; justify-content: center; gap: 6px; }
++  .card-top > span { font-size: .8125rem; }
++  .service-card h3 { grid-column: 2; min-height: 0; margin: 0; font-size: 1.0625rem; line-height: 1.4; }
++  .card-action { grid-column: 2; margin-top: 6px; font-size: .8125rem; line-height: 1.5; }
++  .card-action > .icon:not(.card-arrow) { display: none; }
++  .service-card > .card-arrow { display: block; position: absolute; right: 18px; top: 50%; width: 18px; height: 18px; margin: 0; color: var(--blue); transform: translateY(-50%) rotate(-90deg); }
++  .audience-card { padding: 24px; gap: 20px; min-height: 124px; }
++  .contact-details { padding: 28px 24px; }
++  .contact-number { font-size: clamp(1.25rem, 6vw, 1.7rem); }
++  .lightning-bolt { opacity: .66; }
++  .site-lightning::after { background: linear-gradient(90deg, color-mix(in srgb, var(--black) 96%, transparent) 0%, color-mix(in srgb, var(--black) 86%, transparent) 40%, color-mix(in srgb, var(--black) 42%, transparent) 72%, transparent 100%), linear-gradient(0deg, var(--black), transparent 18%, transparent 82%, var(--black)); }
++  .hero-portrait { inset: 20% -12% 0 26%; opacity: .35; }
++}
++@media (max-width: 370px) {
++  .brand strong { font-size: .8125rem; }
++  .service-card { grid-template-columns: 48px minmax(0, 1fr); column-gap: 12px; padding-inline: 16px 42px; }
++  .card-top .service-icon { width: 48px; height: 48px; padding: 11px; }
++  .service-card > .card-arrow { right: 14px; }
++  .audience-card { padding: 22px 18px; gap: 16px; }
++  .contact-details { padding: 26px 20px; }
++}
++@media (min-width: 851px) { .main-nav { gap: clamp(16px, 2vw, 30px); } }
++@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
++  .service-card:hover::before, .audience-card:hover::before, .contact-details:hover::before { opacity: 1; }
++  .button::after { display: block; }
++}
++@media (hover: hover) and (pointer: fine) {
++  .floating-contact { justify-content: flex-start; }
++  .floating-label { display: block; max-width: 0; opacity: 0; transition: max-width .28s, opacity .2s; }
++  .floating-contact:hover, .floating-contact:focus-visible { width: 200px; gap: 10px; }
++  .floating-contact:hover .floating-label, .floating-contact:focus-visible .floating-label { max-width: 140px; opacity: 1; }
++}
++@media (prefers-reduced-motion: reduce) {
++  .service-card::before, .audience-card::before, .contact-details::before { display: none; }
++  .button::after { display: none; }
++  .floating-contact { animation: none; }
++  .lightning-bolt { opacity: .2; }
++}
++/* PREMIUM PATCH END */
+--- a/script.js
++++ b/script.js
+@@ -236,3 +236,22 @@
+   });
+   window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+ }
++
++// Premium card highlight only; existing navigation and GSAP timelines stay intact.
++const cardGlowMedia = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
++const glowCards = [...document.querySelectorAll('.service-card, .audience-card, .contact-details')];
++function updateCardGlow(event) {
++  const card = event.currentTarget;
++  const bounds = card.getBoundingClientRect();
++  card.style.setProperty('--mx', `${event.clientX - bounds.left}px`);
++  card.style.setProperty('--my', `${event.clientY - bounds.top}px`);
++}
++function syncCardGlow() {
++  glowCards.forEach(card => {
++    card.removeEventListener('pointermove', updateCardGlow);
++    if (cardGlowMedia.matches) card.addEventListener('pointermove', updateCardGlow, { passive: true });
++    else { card.style.removeProperty('--mx'); card.style.removeProperty('--my'); }
++  });
++}
++cardGlowMedia.addEventListener('change', syncCardGlow);
++syncCardGlow();
